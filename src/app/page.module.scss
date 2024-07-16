@@ -1,0 +1,9 @@
+.main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100svh;
+	scroll-snap-type: y mandatory;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
