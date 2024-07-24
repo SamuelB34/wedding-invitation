@@ -24,8 +24,8 @@ export default function Home() {
 					/>
 					<Nosotros />
 					<Invitamos />
-					<NoNinos />
 					<Vestimenta />
+					<NoNinos />
 				</>
 			)}
 		</main>
