@@ -6,6 +6,7 @@ import { Cover } from "@/app/_components/cover/Cover"
 import { Nosotros } from "@/app/_components/nosotros/Nosotros"
 import { Invitamos } from "@/app/_components/invitamos/Invitamos"
 import { NoNinos } from "./_components/no-ninos/NoNinos"
+import { Vestimenta } from "./_components/vestimenta/Vestimenta"
 
 export default function Home() {
 	const [loading, setLoading] = useState(false)
@@ -24,6 +25,7 @@ export default function Home() {
 					<Nosotros />
 					<Invitamos />
 					<NoNinos />
+					<Vestimenta />
 				</>
 			)}
 		</main>
