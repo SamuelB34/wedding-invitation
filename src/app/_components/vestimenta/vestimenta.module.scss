@@ -1,15 +1,34 @@
 .container{
-    background-color: #e7e0dc;
-	width: 100%;
-	height: 100svh;
-	z-index: 1;
-	display: flex;
-	flex-direction: column;
-	gap: 24px;
-	align-items: center;
-	justify-content: center;
-	scroll-snap-align: center;
-	flex: none;
+
+    &:before {
+		background-image: url("/vestimenta/vestimenta.jpg");
+        width: 2645px;
+        height: 3967px;
+        top: -1347px;
+        left: -656px;
+        gap: 0px;
+        opacity: 0.28;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: top;
+		overflow: hidden;
+		content: "";
+		position: absolute;
+		z-index: -1;
+	}
+
+    width: 100%;
+    height: 100svh;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: center;
+    flex: none;
+    overflow: hidden;
+    position: relative;
 
     .title {
             font-family: Love;
@@ -18,13 +37,13 @@
             line-height: 112px;
             letter-spacing: -0.04em;
             text-align: center;
-            color: #302e2d;
+            color: #E7E0DC;
         }
 
     &__box {
         padding: 32px 40px 32px 40px;
         gap: 10px;
-        border: 1px solid #302e2d;
+        border: 1px solid #E7E0DC;
     }
     .text {
         font-family: Stoke;
@@ -33,13 +52,13 @@
         line-height: 48px;
         letter-spacing: 1.04em;
         text-align: center;
-        color: #302e2d;
+        color: #E7E0DC;
     }
 
     .diamond {
         width: 4px; 
         height: 4px;  
-        background: #302e2d;
+        background: #E7E0DC;
         -webkit-transform: rotate(45deg);
         -moz-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
@@ -53,7 +72,7 @@
         font-weight: 300;
         line-height: 32px;
         text-align: center;
-        color: #302e2d;
+        color: #E7E0DC;
         
         b {
 			font-weight: 500;
