@@ -1,5 +1,22 @@
 .container {
-	background-color: #e7e0dc;
+	&:before {
+		background-image: url("/vestimenta/vestimenta.jpg");
+		width: 2645px;
+		height: 3967px;
+		top: -1347px;
+		left: -656px;
+		gap: 0px;
+		opacity: 0.28;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: top;
+		overflow: hidden;
+		content: "";
+		position: absolute;
+		z-index: -1;
+	}
+
+	background-color: rgba(48, 46, 45, 1);
 	width: 100%;
 	height: 100svh;
 	z-index: 1;
@@ -10,11 +27,13 @@
 	justify-content: center;
 	scroll-snap-align: center;
 	flex: none;
+	overflow: hidden;
+	position: relative;
 
 	&__box {
 		padding: 32px 40px 32px 40px;
 		gap: 10px;
-		border: 1px solid #302e2d;
+		border: 1px solid #e7e0dc;
 
 		.title {
 			font-family: Love, sans-serif;
@@ -23,20 +42,21 @@
 			line-height: 90px;
 			letter-spacing: -0.04em;
 			text-align: center;
-			color: #302e2d;
+			color: #e7e0dc;
 		}
 	}
 
 	.line {
 		width: 1px;
 		height: 124px;
-		background-color: #302e2d;
+		background-color: #e7e0dc;
 	}
 }
 
 .text {
 	max-width: 767px;
 	display: flex;
+	align-items: center;
 	flex-direction: column;
 	gap: 18px;
 
@@ -49,7 +69,7 @@
 		line-height: 32px;
 		letter-spacing: 0.42em;
 		text-align: center;
-		color: #302e2d;
+		color: #e7e0dc;
 	}
 
 	&__paragraph {
@@ -60,7 +80,7 @@
 		font-weight: 300;
 		line-height: 32px;
 		text-align: center;
-		color: #302e2d;
+		color: #e7e0dc;
 
 		b {
 			font-family:

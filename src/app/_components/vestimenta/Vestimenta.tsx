@@ -1,18 +1,42 @@
 import styles from "./vestimenta.module.scss"
+import Image from "next/image"
 
 export const Vestimenta = () => {
 	return (
 		<>
 			<div className={styles.container}>
-				<div>
-                    <span className={styles.title}>vESTIMEnTa</span>
-                </div>
-                <div className={styles.container__box}>
-                    <span className={styles.text}>FORMAL COLOR NEGRO</span>
-                </div>
-                <div className={styles.diamond}></div>
-                <div className={styles.paragraph}><p>¡Queremos lograr fotos cohesivas ese día! <br />
-                Les pedimos <b>por favor respeten nuestra elección</b>.</p></div>
+				<div className={styles.outfits_container}>
+					<Image
+						src={"/vestimenta/female-outfit.svg"}
+						alt={"fem"}
+						width={315}
+						height={315}
+					/>
+					<Image
+						src={"/vestimenta/male-outfit.svg"}
+						alt={"male"}
+						width={315}
+						height={315}
+					/>
+				</div>
+				<span className={styles.title}>vESTIMEnTa</span>
+
+				<div className={styles.atuendo}>
+					<span>ATUENDO FORMAL</span>
+					<div className={styles.atuendo__line}></div>
+					<span>COLOR NEGRO</span>
+				</div>
+
+				<span className={styles.paragraph}>
+					¡Queremos lograr fotos cohesivas ese dia! Les pedimos por favor
+					respeten nuestra elección.
+				</span>
+				<span className={styles.paragraph}>
+					¿Búscas inspiración?{" "}
+					<a href="www.google.com" target={"_blank"}>
+						¡Haz click aquí para ideas!
+					</a>
+				</span>
 			</div>
 		</>
 	)

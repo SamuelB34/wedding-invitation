@@ -1,13 +1,14 @@
-.container{
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
 
-    &:before {
-		background-image: url("/vestimenta/vestimenta.jpg");
-        width: 2645px;
-        height: 3967px;
-        top: -1347px;
-        left: -656px;
-        gap: 0px;
-        opacity: 0.28;
+.container {
+	&:before {
+		background-image: url("/vestimenta/paper-bg.webp");
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		gap: 0;
+		opacity: 0.18;
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: top;
@@ -17,66 +18,75 @@
 		z-index: -1;
 	}
 
-    background-color: rgba(48, 46, 45, 1);
-    width: 100%;
-    height: 100svh;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    justify-content: center;
-    align-items: center;
-    scroll-snap-align: center;
-    flex: none;
-    overflow: hidden;
-    position: relative;
+	background-color: #000;
+	width: 100%;
+	height: 100svh;
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	justify-content: center;
+	align-items: center;
+	scroll-snap-align: center;
+	flex: none;
+	overflow: hidden;
+	position: relative;
 
-    .title {
-            font-family: Love;
-            font-size: 94px;
-            font-weight: 400;
-            line-height: 112px;
-            letter-spacing: -0.04em;
-            text-align: center;
-            color: #E7E0DC;
-        }
+	.title {
+		font-family: Love;
+		font-size: 94px;
+		font-weight: 400;
+		line-height: 112px;
+		letter-spacing: -0.04em;
+		text-align: center;
+		color: #e7e0dc;
+	}
 
-    &__box {
-        padding: 32px 40px 32px 40px;
-        gap: 10px;
-        border: 1px solid #E7E0DC;
-    }
-    .text {
-        font-family: Stoke;
-        font-size: 28px;
-        font-weight: 300;
-        line-height: 48px;
-        letter-spacing: 1.04em;
-        text-align: center;
-        color: #E7E0DC;
-    }
+	.outfits_container {
+		display: flex;
+		gap: 52px;
+		align-items: center;
+	}
 
-    .diamond {
-        width: 4px; 
-        height: 4px;  
-        background: #E7E0DC;
-        -webkit-transform: rotate(45deg);
-        -moz-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-        -o-transform: rotate(45deg);
-        transform: rotate(45deg);
-    }
+	.atuendo {
+		display: flex;
+		align-items: center;
+		gap: 32px;
 
-    .paragraph {
-        font-family: League Spartan, sans-serif;
-        font-size: 18px;
-        font-weight: 300;
-        line-height: 32px;
-        text-align: center;
-        color: #E7E0DC;
-        
-        b {
-			font-weight: 500;
+		&__line {
+			width: 1px;
+			height: 48px;
+			background-color: #e7e0dc;
 		}
-    }
+
+		span {
+			font-family: Stoke, sans-serif;
+			font-size: 24px;
+			font-weight: 300;
+			line-height: 48px;
+			letter-spacing: 0.38em;
+			text-align: center;
+		}
+	}
+
+	.paragraph {
+		font-family: "League Spartan", sans-serif;
+		font-size: 18px;
+		font-weight: 300;
+		line-height: 32px;
+		text-align: center;
+		letter-spacing: 2px;
+
+		a {
+			font-family:
+				League Spartan,
+				sans-serif;
+			font-size: 18px;
+			font-weight: 400;
+			line-height: 32px;
+			text-align: center;
+			text-decoration: underline;
+			text-underline: #e7e0dc;
+		}
+	}
 }

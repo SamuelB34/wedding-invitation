@@ -8,7 +8,7 @@ import { Invitamos } from "@/app/_components/invitamos/Invitamos"
 import { NoNinos } from "./_components/no-ninos/NoNinos"
 import { Vestimenta } from "./_components/vestimenta/Vestimenta"
 import { End } from "./_components/end/End"
-
+import { Itinerario } from "@/app/_components/itinerario/Itinerario"
 
 export default function Home() {
 	const [loading, setLoading] = useState(false)
@@ -28,6 +28,7 @@ export default function Home() {
 					<Invitamos />
 					<Vestimenta />
 					<NoNinos />
+					<Itinerario />
 					<End />
 				</>
 			)}
