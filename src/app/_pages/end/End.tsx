@@ -1,13 +1,12 @@
 import styles from "./end.module.scss"
-import { Counter } from "../counter/Counter"
+import { Counter } from "../../_components/counter/Counter"
+import Image from "next/image"
 
 export const End = () => {
 	return (
 		<>
 			<div className={styles.container}>
-				<div className={styles.title__image}>
-					<img src="./end/Vector.png" alt="" />
-				</div>
+				<Image src="/end/Vector.png" alt="end" width={734} height={189} />
 				<div></div>
 				<div>
 					<Counter />

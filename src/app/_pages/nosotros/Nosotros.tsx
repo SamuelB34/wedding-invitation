@@ -14,11 +14,8 @@ export const Nosotros = () => {
 							punto de ver los inicios de nuestra relación…
 							<br />
 							Y como los opuestos se atraen nos hicimos novios el 1ero de Abril
-							del 2015. De describir nuestra relación en un principio diríamos
-							que era como ver a Chloé y Papi de “Una Chihuahua de Beverly
-							Hills” , bien enamorados. Y a pesar de que en gustos no
-							coincidíamos , sí compartíamos muchos puntos de vista, sueños,
-							metas y aspiraciones.
+							del 2015. Y a pesar de que en gustos no coincidíamos , sí
+							compartíamos muchos puntos de vista, sueños, metas y aspiraciones.
 							<br />
 							Muchas cosas pasaron antes de llegar a comprometernos pero lo mas
 							bonito de todo fue vernos crecer el uno al otro y ver nuestro amor

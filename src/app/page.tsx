@@ -2,13 +2,15 @@
 import styles from "./page.module.scss"
 import { Loader } from "@/app/_components/loader/Loader"
 import { useState } from "react"
-import { Cover } from "@/app/_components/cover/Cover"
-import { Nosotros } from "@/app/_components/nosotros/Nosotros"
-import { Invitamos } from "@/app/_components/invitamos/Invitamos"
-import { NoNinos } from "./_components/no-ninos/NoNinos"
-import { Vestimenta } from "./_components/vestimenta/Vestimenta"
-import { End } from "./_components/end/End"
-import { Itinerario } from "@/app/_components/itinerario/Itinerario"
+import { Cover } from "@/app/_pages/cover/Cover"
+import { Nosotros } from "@/app/_pages/nosotros/Nosotros"
+import { Invitamos } from "@/app/_pages/invitamos/Invitamos"
+import { NoNinos } from "@/app/_pages/no-ninos/NoNinos"
+import { Vestimenta } from "@/app/_pages/vestimenta/Vestimenta"
+import { End } from "@/app/_pages/end/End"
+import { Itinerario } from "@/app/_pages/itinerario/Itinerario"
+import { Ubicaciones } from "@/app/_pages/ubicaciones/Ubicaciones"
+import { Regalos } from "@/app/_pages/regalos/Regalos"
 
 export default function Home() {
 	const [loading, setLoading] = useState(false)
@@ -26,9 +28,11 @@ export default function Home() {
 					/>
 					<Nosotros />
 					<Invitamos />
+					<Ubicaciones />
 					<Vestimenta />
 					<NoNinos />
 					<Itinerario />
+					<Regalos />
 					<End />
 				</>
 			)}

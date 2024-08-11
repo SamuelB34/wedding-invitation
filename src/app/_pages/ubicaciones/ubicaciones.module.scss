@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Stoke:wght@300;400&display=swap");
+
+.container {
+	//Importante para hacer que funcione el scroll
+	width: 100%;
+	height: 100svh;
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	scroll-snap-align: center;
+	flex: none;
+	background: #e7e0dc;
+
+	.content {
+		display: flex;
+		gap: 230px;
+
+		&__line {
+			width: 1px;
+			height: 29px;
+			background-color: #323226;
+		}
+
+		&__base {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 14px;
+			max-width: 428px;
+
+			&--place {
+				font-family:
+					League Spartan,
+					sans-serif;
+				font-size: 18px;
+				font-weight: 300;
+				line-height: 32px;
+				text-align: center;
+				color: #323226;
+
+				b {
+					font-family:
+						League Spartan,
+						sans-serif;
+					font-size: 18px;
+					font-weight: 500;
+					line-height: 32px;
+					text-align: center;
+				}
+			}
+
+			&--text {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+
+				.hour {
+					font-family: Stoke;
+					font-size: 18px;
+					font-weight: 300;
+					line-height: 32px;
+					letter-spacing: 0.56em;
+					text-align: center;
+					color: #302e2d;
+				}
+
+				.spot {
+					font-family: Love, sans-serif;
+					font-size: 84px;
+					font-weight: 400;
+					line-height: 90px;
+					letter-spacing: -0.04em;
+					text-align: center;
+					color: #302e2d;
+				}
+
+				.name {
+				}
+			}
+		}
+	}
+}

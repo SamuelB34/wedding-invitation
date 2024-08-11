@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Stoke:wght@300;400&display=swap");
+
 .invitamos {
 	&:before {
 		background-image: url("/invitamos/invitamos.png");
@@ -61,7 +63,7 @@
 				}
 
 				span {
-					font-family: Stoke, sans-serif;
+					font-family: Stoke;
 					font-size: clamp(12px, 2vw, 18px);
 					font-weight: 300;
 					line-height: 24px;
