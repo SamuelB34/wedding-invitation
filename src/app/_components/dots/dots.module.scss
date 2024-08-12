@@ -1,0 +1,113 @@
+@import "src/shared/scss/_media-queries";
+
+.dots {
+	display: none;
+	z-index: 3;
+	align-items: center;
+	gap: 16px;
+	position: fixed;
+	bottom: 32px;
+
+	@include mobile {
+		bottom: 24px;
+		display: flex;
+	}
+	-webkit-animation: slide-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+		both;
+	animation: slide-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+
+	&--active {
+		width: 12px;
+		height: 12px;
+		border: 1px solid #e7e0dc;
+		border-radius: 6px;
+		background: none;
+		rotate: 0deg;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: border 1s ease-in;
+
+		&__dark {
+			width: 12px;
+			height: 12px;
+			border: 1px solid #908a87;
+			border-radius: 6px;
+			background: none;
+			rotate: 0deg;
+			transition: rotate 0.5s;
+			cursor: pointer;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			.inner_circle {
+				width: 8px;
+				height: 8px;
+				border-radius: 4px;
+				background-color: #908a87;
+				transition: background-color 1s ease-in;
+			}
+		}
+
+		.inner_circle {
+			width: 8px;
+			height: 8px;
+			border-radius: 4px;
+			background-color: #e7e0dc;
+			transition: background-color 1s ease-in;
+		}
+	}
+
+	&--inactive {
+		width: 12px;
+		height: 12px;
+		border-radius: 6px;
+		border: 1px solid #e7e0dc;
+		rotate: 45deg;
+		cursor: pointer;
+		transition: border 1s ease-in;
+
+		&__dark {
+			width: 12px;
+			height: 12px;
+			border-radius: 6px;
+			border: 1px solid #908a87;
+			rotate: 45deg;
+			cursor: pointer;
+			transition: border 1s ease-in;
+		}
+	}
+}
+
+@-webkit-keyframes slide-in-bottom {
+	0% {
+		-webkit-transform: translateY(1000px);
+		transform: translateY(1000px);
+		opacity: 0;
+	}
+	100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+@keyframes slide-in-bottom {
+	0% {
+		-webkit-transform: translateY(1000px);
+		transform: translateY(1000px);
+		opacity: 0;
+	}
+	100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+.light_icon {
+	transition: filter 2s ease-in;
+	filter: brightness(0) saturate(100%) invert(96%) sepia(5%) saturate(285%)
+		hue-rotate(335deg) brightness(97%) contrast(86%);
+}

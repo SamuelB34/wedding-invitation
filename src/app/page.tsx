@@ -12,10 +12,20 @@ import { Itinerario } from "@/app/_pages/itinerario/Itinerario"
 import { Ubicaciones } from "@/app/_pages/ubicaciones/Ubicaciones"
 import { Regalos } from "@/app/_pages/regalos/Regalos"
 import { Header } from "@/app/_components/header/Header"
+import { Dots } from "./_components/dots/Dots"
+import { pages } from "../../shared/variables"
 
 export default function Home() {
 	const [loading, setLoading] = useState(false)
 	const [section, setSection] = useState("")
+	const [sectionNumber, setSectionNumber] = useState(0)
+
+	const scrollToElement = (view: string) => {
+		const element = document.getElementById(view)
+		if (element) {
+			element.scrollIntoView({ behavior: "smooth" })
+		}
+	}
 
 	useEffect(() => {
 		const sections = document.querySelectorAll("section") // Suponiendo que tus secciones están en etiquetas <section>
@@ -24,7 +34,11 @@ export default function Home() {
 				entries.forEach((entry) => {
 					if (entry.isIntersecting) {
 						setSection(entry.target.id) // Guarda el id de la sección visible
-						console.log(entry.target.id)
+						setSectionNumber(
+							pages.findIndex((page) => {
+								return page.name === entry.target.id
+							}) || 0
+						)
 					}
 				})
 			},
@@ -65,6 +79,16 @@ export default function Home() {
 					<Itinerario id={"itinerario"} />
 					<Regalos id={"regalos"} />
 					<End id={"end"} />
+
+					{section !== "cover" && (
+						<Dots
+							dark={dark_pages.includes(section)}
+							active={sectionNumber}
+							click={(section: string) => {
+								scrollToElement(section)
+							}}
+						/>
+					)}
 				</>
 			)}
 		</main>
