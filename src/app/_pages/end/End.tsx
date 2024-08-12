@@ -1,8 +1,35 @@
 import styles from "./end.module.scss"
 import { Counter } from "../../_components/counter/Counter"
 import Image from "next/image"
+import { useEffect, useRef } from "react"
 
 export const End = () => {
+	const textRef = useRef<any>(null)
+
+	useEffect(() => {
+		const observer = new IntersectionObserver(
+			(entries) => {
+				const firstEntry = entries[0]
+				if (firstEntry && firstEntry.isIntersecting) {
+					if (textRef.current) {
+						textRef.current.classList.add(styles["text__paragraph--animation"])
+					}
+				}
+			},
+			{ threshold: 0.1 } // Ajusta el umbral según lo que necesites (0.1 es el 10% visible)
+		)
+
+		if (textRef.current) {
+			observer.observe(textRef.current)
+		}
+
+		return () => {
+			if (textRef.current) {
+				observer.unobserve(textRef.current)
+			}
+		}
+	}, [])
+
 	return (
 		<>
 			<div className={styles.container}>
@@ -19,7 +46,7 @@ export const End = () => {
 				</div>
 				<div className={styles.text}>
 					<p className={styles.text__title}>¡NOS VEMOS PRONTO!</p>
-					<p className={styles.text__paragraph}>
+					<p className={styles.text__paragraph} ref={textRef}>
 						Si aún no confirmas tu asistencia, <br />{" "}
 						<a href="#">¡haz click aquí!</a>
 					</p>

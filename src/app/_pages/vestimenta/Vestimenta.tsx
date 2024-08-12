@@ -1,7 +1,45 @@
 import styles from "./vestimenta.module.scss"
 import Image from "next/image"
+import { useEffect, useRef } from "react"
 
 export const Vestimenta = () => {
+	const paragraphRef = useRef<any>(null)
+	const inspirationRef = useRef<any>(null)
+
+	useEffect(() => {
+		const observer = new IntersectionObserver(
+			(entries) => {
+				const firstEntry = entries[0]
+				if (firstEntry && firstEntry.isIntersecting) {
+					if (paragraphRef.current) {
+						paragraphRef.current.classList.add(styles["paragraph__animation"])
+					}
+					if (inspirationRef.current) {
+						inspirationRef.current.classList.add(styles["paragraph__animation"])
+					}
+				}
+			},
+			{ threshold: 0.1 } // Ajusta el umbral según lo que necesites (0.1 es el 10% visible)
+		)
+
+		if (paragraphRef.current) {
+			observer.observe(paragraphRef.current)
+		}
+
+		if (inspirationRef.current) {
+			observer.observe(inspirationRef.current)
+		}
+
+		return () => {
+			if (paragraphRef.current) {
+				observer.unobserve(paragraphRef.current)
+			}
+			if (inspirationRef.current) {
+				observer.unobserve(inspirationRef.current)
+			}
+		}
+	})
+
 	return (
 		<>
 			<div className={styles.container}>
@@ -29,11 +67,11 @@ export const Vestimenta = () => {
 					<span>COLOR NEGRO</span>
 				</div>
 
-				<span className={styles.paragraph}>
+				<span className={styles.paragraph} ref={paragraphRef}>
 					¡Queremos lograr fotos cohesivas ese dia! Les pedimos por favor
 					respeten nuestra elección.
 				</span>
-				<span className={styles.paragraph}>
+				<span className={styles.paragraph} ref={inspirationRef}>
 					¿Búscas inspiración? <br />
 					<a href="https://www.google.com" target={"_blank"}>
 						¡Haz click aquí para ideas!

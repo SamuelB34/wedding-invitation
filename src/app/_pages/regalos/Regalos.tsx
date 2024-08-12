@@ -1,7 +1,34 @@
 import styles from "./regalos.module.scss"
 import Image from "next/image"
+import { useEffect, useRef } from "react"
 
 export const Regalos = () => {
+	const btnsRef = useRef<any>(null)
+
+	useEffect(() => {
+		const observer = new IntersectionObserver(
+			(entries) => {
+				const firstEntry = entries[0]
+				if (firstEntry && firstEntry.isIntersecting) {
+					if (btnsRef.current) {
+						btnsRef.current.classList.add(styles["right__btns--animation"])
+					}
+				}
+			},
+			{ threshold: 0.1 } // Ajusta el umbral según lo que necesites (0.1 es el 10% visible)
+		)
+
+		if (btnsRef.current) {
+			observer.observe(btnsRef.current)
+		}
+
+		return () => {
+			if (btnsRef.current) {
+				observer.unobserve(btnsRef.current)
+			}
+		}
+	}, [])
+
 	return (
 		<div className={styles.container}>
 			<div className={styles.content}>
@@ -18,7 +45,7 @@ export const Regalos = () => {
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu
 								aliquam ante, sed maximus.
 							</span>
-							<div className={styles.right__btns}>
+							<div className={styles.right__btns} ref={btnsRef}>
 								<div className={styles.btn}>
 									<span>Bed, Bath & Beyond</span>
 								</div>

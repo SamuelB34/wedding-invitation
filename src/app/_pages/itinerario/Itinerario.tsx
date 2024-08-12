@@ -1,5 +1,6 @@
 import styles from "./itinerario.module.scss"
 import Image from "next/image"
+import { useEffect, useRef } from "react"
 
 export const Itinerario = () => {
 	const itinerario: { name: string; hour: string }[] = [
@@ -20,10 +21,37 @@ export const Itinerario = () => {
 			hour: "5:00 P.M.",
 		},
 	]
+
+	const cardRef = useRef<any>(null)
+
+	useEffect(() => {
+		const observer = new IntersectionObserver(
+			(entries) => {
+				const firstEntry = entries[0]
+				if (firstEntry && firstEntry.isIntersecting) {
+					if (cardRef.current) {
+						cardRef.current.classList.add(styles["card__animation"])
+					}
+				}
+			},
+			{ threshold: 0.1 } // Ajusta el umbral según lo que necesites (0.1 es el 10% visible)
+		)
+
+		if (cardRef.current) {
+			observer.observe(cardRef.current)
+		}
+
+		return () => {
+			if (cardRef.current) {
+				observer.unobserve(cardRef.current)
+			}
+		}
+	}, [])
+
 	return (
 		<>
 			<div className={styles.container}>
-				<div className={styles.card}>
+				<div className={styles.card} ref={cardRef}>
 					<div className={styles.content}>
 						<div className={styles.content__top}>
 							<Image

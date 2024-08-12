@@ -1,16 +1,43 @@
 import styles from "./nosotros.module.scss"
 import Image from "next/image"
+import { useEffect, useRef } from "react"
 
 export const Nosotros = () => {
+	const bodyRef = useRef<any>(null)
+
+	useEffect(() => {
+		const observer = new IntersectionObserver(
+			(entries) => {
+				const firstEntry = entries[0]
+				if (firstEntry && firstEntry.isIntersecting) {
+					if (bodyRef.current) {
+						bodyRef.current.classList.add(styles["text__container--animation"])
+					}
+				}
+			},
+			{ threshold: 0.1 } // Ajusta el umbral según lo que necesites (0.1 es el 10% visible)
+		)
+
+		if (bodyRef.current) {
+			observer.observe(bodyRef.current)
+		}
+
+		return () => {
+			if (bodyRef.current) {
+				observer.unobserve(bodyRef.current)
+			}
+		}
+	}, [])
+
 	return (
 		<div className={styles.nosotros}>
 			<div className={styles.nosotros__content}>
 				<div className={styles.text}>
-					<div className={styles.text__container}>
+					<div className={styles.text__container} ref={bodyRef}>
 						<h3 className={styles.text__title}>Nosotros</h3>
 						<p className={styles.text__paragraph}>
 							Nos conocimos en el 2014 en nuestro primer año de prepa por medio
-							de amigos en común , amigos que aun conservamos y que estaban a
+							de amigos en común, amigos que aun conservamos y que estaban a
 							punto de ver los inicios de nuestra relación…
 							{/*<br />*/}
 							{/*Y como los opuestos se atraen nos hicimos novios el 1ero de Abril*/}
@@ -43,14 +70,14 @@ export const Nosotros = () => {
 							ABR
 							<Image
 								src={"/nosotros/diamond.svg"}
-								alt={"diamong"}
+								alt={"diamond"}
 								width={7}
 								height={7}
 							/>
 							1
 							<Image
 								src={"/nosotros/diamond.svg"}
-								alt={"diamong"}
+								alt={"diamond"}
 								width={7}
 								height={7}
 							/>

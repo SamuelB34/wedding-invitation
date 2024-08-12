@@ -1,7 +1,45 @@
 import styles from "./ubicaciones.module.scss"
 import Image from "next/image"
+import { useEffect, useRef } from "react"
 
 export const Ubicaciones = () => {
+	const card1 = useRef<any>(null)
+	const card2 = useRef<any>(null)
+
+	useEffect(() => {
+		const observer = new IntersectionObserver(
+			(entries) => {
+				const firstEntry = entries[0]
+				if (firstEntry && firstEntry.isIntersecting) {
+					if (card1.current) {
+						card1.current.classList.add(styles["card__animation"])
+					}
+					if (card2.current) {
+						card2.current.classList.add(styles["card__animation"])
+					}
+				}
+			},
+			{ threshold: 0.1 } // Ajusta el umbral según lo que necesites (0.1 es el 10% visible)
+		)
+
+		if (card1.current) {
+			observer.observe(card1.current)
+		}
+
+		if (card2.current) {
+			observer.observe(card2.current)
+		}
+
+		return () => {
+			if (card1.current) {
+				observer.unobserve(card1.current)
+			}
+			if (card2.current) {
+				observer.unobserve(card2.current)
+			}
+		}
+	}, [])
+
 	return (
 		<div className={styles.container}>
 			<div className={styles.content}>
@@ -45,7 +83,7 @@ export const Ubicaciones = () => {
 			</div>
 
 			<div className={styles.mobile}>
-				<div className={styles.card}>
+				<div className={styles.card} ref={card1}>
 					<Image
 						src={"/ubicaciones/ceremonia.svg"}
 						alt={"ceremonia"}
@@ -69,7 +107,7 @@ export const Ubicaciones = () => {
 					</div>
 				</div>
 
-				<div className={styles.card}>
+				<div className={styles.card} ref={card2}>
 					<Image
 						src={"/ubicaciones/recepcion.svg"}
 						alt={"recepcion"}
