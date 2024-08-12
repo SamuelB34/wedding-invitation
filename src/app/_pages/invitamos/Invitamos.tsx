@@ -1,7 +1,11 @@
 import styles from "./invitamos.module.scss"
 import { useEffect, useRef } from "react"
 
-export const Invitamos = () => {
+interface Props {
+	id: string
+}
+
+export const Invitamos = ({ id }: Props) => {
 	const text1Ref = useRef<any>(null)
 	const text2Ref = useRef<any>(null)
 	const text3Ref = useRef<any>(null)
@@ -81,7 +85,7 @@ export const Invitamos = () => {
 	}, [])
 
 	return (
-		<div className={styles.invitamos}>
+		<section className={styles.invitamos} id={id}>
 			<div className={styles.invitamos__content}>
 				<div></div>
 				<div className={styles.right}>
@@ -101,6 +105,6 @@ export const Invitamos = () => {
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 	)
 }

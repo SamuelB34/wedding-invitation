@@ -2,7 +2,7 @@ import styles from "./regalos.module.scss"
 import Image from "next/image"
 import { useEffect, useRef } from "react"
 
-export const Regalos = () => {
+export const Regalos = ({ id }: { id: string }) => {
 	const btnsRef = useRef<any>(null)
 
 	useEffect(() => {
@@ -30,7 +30,7 @@ export const Regalos = () => {
 	}, [])
 
 	return (
-		<div className={styles.container}>
+		<section className={styles.container} id={id}>
 			<div className={styles.content}>
 				<div className={styles.top}>
 					<div className={styles.top__head}>
@@ -69,6 +69,6 @@ export const Regalos = () => {
 					height={475}
 				/>
 			</div>
-		</div>
+		</section>
 	)
 }

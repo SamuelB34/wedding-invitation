@@ -1,7 +1,7 @@
 import styles from "./no-ninos.module.scss"
 import { useEffect, useRef } from "react"
 
-export const NoNinos = () => {
+export const NoNinos = ({ id }: { id: string }) => {
 	const lineRef = useRef<any>(null)
 	const titleRef = useRef<any>(null)
 	const paragraphRef = useRef<any>(null)
@@ -53,25 +53,23 @@ export const NoNinos = () => {
 	})
 
 	return (
-		<>
-			<div className={styles.container}>
-				<div className={styles.container__box}>
-					<span className={styles.title}>NO nIñoS</span>
-				</div>
-				<div className={styles.text}>
-					<p className={styles.text__title} ref={titleRef}>
-						ADULTOS SOLAMENTE SIN EXCEPCIÓN
-					</p>
-					<div className={styles.line}>
-						<div className={styles.line__content} ref={lineRef}></div>
-					</div>
-					<p className={styles.text__paragraph} ref={paragraphRef}>
-						Esperamos puedan encontrar un lugar seguro para dejar a sus hijos al
-						cuidado <br /> de otros y comprender nuestra decisión de hacer de
-						este evento uno <b>SIN NIÑOS</b>.
-					</p>
-				</div>
+		<section className={styles.container} id={id}>
+			<div className={styles.container__box}>
+				<span className={styles.title}>NO nIñoS</span>
 			</div>
-		</>
+			<div className={styles.text}>
+				<p className={styles.text__title} ref={titleRef}>
+					ADULTOS SOLAMENTE SIN EXCEPCIÓN
+				</p>
+				<div className={styles.line}>
+					<div className={styles.line__content} ref={lineRef}></div>
+				</div>
+				<p className={styles.text__paragraph} ref={paragraphRef}>
+					Esperamos puedan encontrar un lugar seguro para dejar a sus hijos al
+					cuidado <br /> de otros y comprender nuestra decisión de hacer de este
+					evento uno <b>SIN NIÑOS</b>.
+				</p>
+			</div>
+		</section>
 	)
 }

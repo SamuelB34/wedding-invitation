@@ -2,7 +2,10 @@ import styles from "./nosotros.module.scss"
 import Image from "next/image"
 import { useEffect, useRef } from "react"
 
-export const Nosotros = () => {
+interface Props {
+	id: string
+}
+export const Nosotros = ({ id }: Props) => {
 	const bodyRef = useRef<any>(null)
 
 	useEffect(() => {
@@ -30,7 +33,7 @@ export const Nosotros = () => {
 	}, [])
 
 	return (
-		<div className={styles.nosotros}>
+		<section className={styles.nosotros} id={id}>
 			<div className={styles.nosotros__content}>
 				<div className={styles.text}>
 					<div className={styles.text__container} ref={bodyRef}>
@@ -86,6 +89,6 @@ export const Nosotros = () => {
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 	)
 }

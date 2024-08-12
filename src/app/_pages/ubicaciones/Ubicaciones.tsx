@@ -2,7 +2,11 @@ import styles from "./ubicaciones.module.scss"
 import Image from "next/image"
 import { useEffect, useRef } from "react"
 
-export const Ubicaciones = () => {
+interface Props {
+	id: string
+}
+
+export const Ubicaciones = ({ id }: Props) => {
 	const card1 = useRef<any>(null)
 	const card2 = useRef<any>(null)
 
@@ -41,7 +45,7 @@ export const Ubicaciones = () => {
 	}, [])
 
 	return (
-		<div className={styles.container}>
+		<section className={styles.container} id={id}>
 			<div className={styles.content}>
 				<div className={styles.content__base}>
 					<Image
@@ -127,6 +131,6 @@ export const Ubicaciones = () => {
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 	)
 }

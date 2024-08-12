@@ -5,11 +5,12 @@ import { Counter } from "@/app/_components/counter/Counter"
 
 interface Props {
 	openForm: () => void
+	id: string
 }
 
-export const Cover = ({ openForm }: Props) => {
+export const Cover = ({ openForm, id }: Props) => {
 	return (
-		<div className={styles.cover}>
+		<section className={styles.cover} id={id}>
 			<div className={styles.cover__content}>
 				<Image
 					src={"/cover/letters-2.svg"}
@@ -37,6 +38,6 @@ export const Cover = ({ openForm }: Props) => {
 				{/*	</WedButton>*/}
 				{/*</div>*/}
 			</div>
-		</div>
+		</section>
 	)
 }
