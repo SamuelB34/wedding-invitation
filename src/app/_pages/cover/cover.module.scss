@@ -27,7 +27,34 @@
 		height: 100svh;
 
 		@include mobile {
-			padding-bottom: 40px;
+			padding-bottom: 64px;
+			gap: 48px;
+		}
+
+		.bottom {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			gap: 28px;
+
+			-webkit-animation: slide-in-bottom 2s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+				2s both;
+			animation: slide-in-bottom 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 2s both;
+		}
+
+		.days_text {
+			font-family: Stoke;
+			font-size: 14px;
+			font-weight: 300;
+			line-height: 20px;
+			letter-spacing: 0.43em;
+			text-align: center;
+			display: none;
+
+			@include mobile {
+				display: block;
+			}
 		}
 
 		.letters-desktop {

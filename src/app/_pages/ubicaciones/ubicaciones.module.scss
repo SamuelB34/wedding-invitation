@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Stoke:wght@300;400&display=swap");
+@import "src/shared/scss/media-queries";
 
 .container {
 	//Importante para hacer que funcione el scroll
@@ -16,6 +17,10 @@
 	.content {
 		display: flex;
 		gap: 230px;
+
+		@include mobile {
+			display: none;
+		}
 
 		&__line {
 			width: 1px;
@@ -80,5 +85,84 @@
 				}
 			}
 		}
+	}
+}
+
+.mobile {
+	display: none;
+
+	@include mobile {
+		display: grid;
+		grid-template-rows: repeat(2, 1fr);
+		gap: 40px;
+		width: 100%;
+		padding: 16px;
+	}
+
+	.card {
+		position: relative;
+	}
+
+	&__ceremonias {
+		width: 100%;
+		height: auto;
+		position: relative;
+	}
+
+	.hour {
+		position: absolute;
+		top: 16px;
+		left: 16px;
+		border: 1px solid var(--Light-Beige, #e7e0dc);
+		padding: 8px 12px;
+		border-radius: 8px;
+		background: #ffffff33;
+
+		span {
+			opacity: 1;
+			font-family: Stoke;
+			font-size: 14px;
+			font-weight: 300;
+			line-height: 20px;
+			letter-spacing: 0.4em;
+			text-align: left;
+		}
+	}
+
+	.data {
+		position: absolute;
+		bottom: 24px;
+		left: 16px;
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+
+		&__title {
+			font-family: Stoke;
+			font-size: 24px;
+			font-weight: 300;
+			line-height: 32px;
+			color: #fff;
+		}
+
+		&__name {
+			font-family:
+				League Spartan,
+				sans-serif;
+			font-size: 14px;
+			font-weight: 300;
+			line-height: 20px;
+			color: #fff;
+
+			b {
+				font-weight: 500;
+			}
+		}
+	}
+
+	&__marah {
+		width: 100%;
+		height: auto;
+		position: relative;
 	}
 }

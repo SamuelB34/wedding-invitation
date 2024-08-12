@@ -11,12 +11,14 @@ export const Vestimenta = () => {
 						alt={"fem"}
 						width={315}
 						height={315}
+						className={styles.img}
 					/>
 					<Image
 						src={"/vestimenta/male-outfit.svg"}
 						alt={"male"}
 						width={315}
 						height={315}
+						className={styles.img}
 					/>
 				</div>
 				<span className={styles.title}>vESTIMEnTa</span>
@@ -32,8 +34,8 @@ export const Vestimenta = () => {
 					respeten nuestra elección.
 				</span>
 				<span className={styles.paragraph}>
-					¿Búscas inspiración?{" "}
-					<a href="www.google.com" target={"_blank"}>
+					¿Búscas inspiración? <br />
+					<a href="https://www.google.com" target={"_blank"}>
 						¡Haz click aquí para ideas!
 					</a>
 				</span>

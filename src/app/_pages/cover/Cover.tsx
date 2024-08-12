@@ -26,7 +26,10 @@ export const Cover = ({ openForm }: Props) => {
 					className={styles["letters-mobile"]}
 				/>
 
-				<Counter />
+				<div className={styles.bottom}>
+					<Counter />
+					<span className={styles.days_text}>DAYS ‘TIL THE BIG DAY</span>
+				</div>
 
 				{/*<div className={styles.btn}>*/}
 				{/*	<WedButton onClick={openForm}>*/}

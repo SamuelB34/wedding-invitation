@@ -10,6 +10,9 @@ export const Regalos = () => {
 						<span className={styles.title}>
 							Registro de <br /> Regalos
 						</span>
+
+						<div className={styles.line}></div>
+
 						<div className={styles.right}>
 							<span className={styles.right__text}>
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu

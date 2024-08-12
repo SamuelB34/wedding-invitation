@@ -31,6 +31,7 @@ export const Itinerario = () => {
 								alt={"leaf"}
 								width={64}
 								height={31}
+								className={styles.leaf}
 							/>
 							<div className={styles["content__top--texts"]}>
 								<span className={styles.programa}>PROGRAMA DE BODA</span>
@@ -41,7 +42,7 @@ export const Itinerario = () => {
 							{itinerario.map((evento: { hour: string; name: string }) => {
 								return (
 									<div key={evento.name} className={styles.events}>
-										<span>{evento.name}</span>
+										<span className={styles.name}>{evento.name}</span>
 										<span>{evento.hour}</span>
 									</div>
 								)

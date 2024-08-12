@@ -43,6 +43,52 @@ export const Ubicaciones = () => {
 					</span>
 				</div>
 			</div>
+
+			<div className={styles.mobile}>
+				<div className={styles.card}>
+					<Image
+						src={"/ubicaciones/ceremonia.svg"}
+						alt={"ceremonia"}
+						className={styles.mobile__ceremonias}
+						width={350}
+						height={256}
+					/>
+					<div className={styles.hour}>
+						<span>4:50 PM</span>
+					</div>
+
+					<div className={styles.data}>
+						<span className={styles.data__title}>Ceremonia</span>
+						<span className={styles.data__name}>
+							Parroquia de{" "}
+							<b>
+								Nuestra Señora del <br />
+								Perpetuo Socorro
+							</b>
+						</span>
+					</div>
+				</div>
+
+				<div className={styles.card}>
+					<Image
+						src={"/ubicaciones/recepcion.svg"}
+						alt={"recepcion"}
+						className={styles.mobile__ceremonias}
+						width={350}
+						height={256}
+					/>
+					<div className={styles.hour}>
+						<span>4:50 PM</span>
+					</div>
+
+					<div className={styles.data}>
+						<span className={styles.data__title}>Recepción</span>
+						<span className={styles.data__name}>
+							<b>Marah</b> Jardín de Eventos
+						</span>
+					</div>
+				</div>
+			</div>
 		</div>
 	)
 }

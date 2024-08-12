@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Stoke:wght@300;400&display=swap");
+@import "src/shared/scss/media-queries";
 
 .invitamos {
 	&:before {
@@ -15,6 +16,10 @@
 		width: 100%;
 		height: 100%;
 		z-index: -1;
+
+		@include mobile {
+			background-image: url("/invitamos/background-mobile.png");
+		}
 	}
 
 	width: 100%;
@@ -29,12 +34,24 @@
 	overflow: hidden;
 	position: relative;
 
+	@include mobile {
+		justify-content: flex-end;
+		padding-bottom: 64px;
+	}
 	&__content {
 		display: grid;
 		grid-template-columns: 0.85fr 1fr;
 
+		@include mobile {
+			grid-template-columns: auto;
+			grid-template-rows: 0.5fr 1fr;
+		}
+
 		.right {
 			border-left: 1px solid #fff;
+			@include mobile {
+				margin-left: 16px;
+			}
 
 			&__container {
 				padding-left: 64px;
@@ -43,6 +60,11 @@
 				gap: 28px;
 				max-width: 702px;
 
+				@include mobile {
+					padding-left: 16px;
+					gap: 4px;
+				}
+
 				h3 {
 					font-family: Love, sans-serif;
 					font-size: clamp(56px, 7vw, 94px);
@@ -50,6 +72,14 @@
 					line-height: 100px;
 					letter-spacing: -0.04em;
 					text-align: left;
+
+					@include mobile {
+						font-family: Love, sans-serif;
+						font-size: 48px;
+						font-weight: 400;
+						letter-spacing: -0.04em;
+						text-align: left;
+					}
 				}
 
 				p {
@@ -60,6 +90,11 @@
 					font-weight: 300;
 					line-height: 32px;
 					text-align: left;
+
+					@include mobile {
+						font-size: 16px;
+						line-height: 26px;
+					}
 				}
 
 				span {

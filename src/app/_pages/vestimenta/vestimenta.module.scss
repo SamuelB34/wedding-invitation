@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Stoke:wght@300;400&display=swap");
+@import "src/shared/scss/media-queries";
 
 .container {
 	&:before {
@@ -33,6 +34,10 @@
 	overflow: hidden;
 	position: relative;
 
+	@include mobile {
+		padding: 16px;
+	}
+
 	.title {
 		font-family: Love;
 		font-size: 94px;
@@ -41,12 +46,27 @@
 		letter-spacing: -0.04em;
 		text-align: center;
 		color: #e7e0dc;
+
+		@include mobile {
+			font-size: 84px;
+			line-height: 100px;
+		}
 	}
 
 	.outfits_container {
 		display: flex;
 		gap: 52px;
 		align-items: center;
+
+		.img {
+			width: 315px;
+			height: 315px;
+
+			@include mobile {
+				width: 120px;
+				height: 120px;
+			}
+		}
 	}
 
 	.atuendo {
@@ -54,10 +74,20 @@
 		align-items: center;
 		gap: 32px;
 
+		@include mobile {
+			flex-direction: column;
+			gap: 16px;
+		}
+
 		&__line {
 			width: 1px;
 			height: 48px;
 			background-color: #e7e0dc;
+
+			@include mobile {
+				width: 22px;
+				height: 1px;
+			}
 		}
 
 		span {
@@ -67,6 +97,11 @@
 			line-height: 48px;
 			letter-spacing: 0.38em;
 			text-align: center;
+
+			@include mobile {
+				font-size: 16px;
+				line-height: 22px;
+			}
 		}
 	}
 
@@ -77,6 +112,19 @@
 		line-height: 32px;
 		text-align: center;
 		letter-spacing: 2px;
+
+		@include mobile {
+			font-size: 16px;
+			line-height: 24px;
+		}
+
+		br {
+			display: none;
+
+			@include mobile {
+				display: block;
+			}
+		}
 
 		a {
 			font-family:
