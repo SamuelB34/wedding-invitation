@@ -1,0 +1,47 @@
+.rsvp {
+	position: fixed;
+
+	left: 0;
+	z-index: 4;
+	background-color: #574f4b;
+	width: 100%;
+	height: 100svh;
+
+	&__show {
+		top: 0;
+		opacity: 1;
+		transition: opacity 0.5s ease-in;
+	}
+
+	&__hide {
+		top: 100vh;
+		opacity: 0;
+		transition: opacity 0.5s ease-out;
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+		gap: 16px;
+
+		.hello {
+			font-family: Love;
+			font-size: 68px;
+			font-weight: 400;
+			line-height: 69px;
+			letter-spacing: -0.04em;
+			text-align: center;
+		}
+
+		.instructions {
+			font-family: "League Spartan";
+			font-size: 16px;
+			font-weight: 300;
+			line-height: 24px;
+			text-align: center;
+		}
+	}
+}
