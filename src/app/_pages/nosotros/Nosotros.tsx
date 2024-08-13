@@ -42,14 +42,14 @@ export const Nosotros = ({ id }: Props) => {
 							Nos conocimos en el 2014 en nuestro primer año de prepa por medio
 							de amigos en común, amigos que aun conservamos y que estaban a
 							punto de ver los inicios de nuestra relación…
-							{/*<br />*/}
+							<br />
 							{/*Y como los opuestos se atraen nos hicimos novios el 1ero de Abril*/}
 							{/*del 2015. Y a pesar de que en gustos no coincidíamos , sí*/}
 							{/*compartíamos muchos puntos de vista, sueños, metas y aspiraciones.*/}
 							{/*<br />*/}
-							{/*Muchas cosas pasaron antes de llegar a comprometernos pero lo mas*/}
-							{/*bonito de todo fue vernos crecer el uno al otro y ver nuestro amor*/}
-							{/*madurar lo suficiente para llegar al matrimonio.*/}
+							Muchas cosas pasaron antes de llegar a comprometernos pero lo mas
+							bonito de todo fue vernos crecer el uno al otro y ver nuestro amor
+							madurar lo suficiente para llegar al matrimonio.
 						</p>
 					</div>
 				</div>
@@ -62,7 +62,7 @@ export const Nosotros = ({ id }: Props) => {
 				/>
 				<div className={styles.mobile}>
 					<Image
-						src={"/nosotros/mobile.svg"}
+						src={"/nosotros/us-mobile.png"}
 						alt={"nosotros"}
 						width={390}
 						height={312}

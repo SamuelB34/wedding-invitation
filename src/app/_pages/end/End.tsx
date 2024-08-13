@@ -5,6 +5,7 @@ import { useEffect, useRef } from "react"
 
 export const End = ({ id }: { id: string }) => {
 	const textRef = useRef<any>(null)
+	const imgRef = useRef<any>(null)
 
 	useEffect(() => {
 		const observer = new IntersectionObserver(
@@ -13,6 +14,9 @@ export const End = ({ id }: { id: string }) => {
 				if (firstEntry && firstEntry.isIntersecting) {
 					if (textRef.current) {
 						textRef.current.classList.add(styles["text__paragraph--animation"])
+					}
+					if (imgRef.current) {
+						imgRef.current.classList.add(styles["container__img--animation"])
 					}
 				}
 			},
@@ -23,9 +27,16 @@ export const End = ({ id }: { id: string }) => {
 			observer.observe(textRef.current)
 		}
 
+		if (imgRef.current) {
+			observer.observe(imgRef.current)
+		}
+
 		return () => {
 			if (textRef.current) {
 				observer.unobserve(textRef.current)
+			}
+			if (imgRef.current) {
+				observer.unobserve(imgRef.current)
 			}
 		}
 	}, [])
@@ -38,6 +49,7 @@ export const End = ({ id }: { id: string }) => {
 				width={734}
 				height={189}
 				className={styles.container__img}
+				ref={imgRef}
 			/>
 			<div></div>
 			<div>

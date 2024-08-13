@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Stoke:wght@300;400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
 @import "src/shared/scss/media-queries";
 @import "src/shared/scss/animations";
 
@@ -106,10 +105,8 @@
 	gap: 18px;
 
 	&__title {
-		font-family:
-			League Spartan,
-			sans-serif;
-		font-size: 18px;
+		font-family: Spartan, sans-serif;
+		font-size: 15px;
 		font-weight: 600;
 		line-height: 32px;
 		letter-spacing: 0.42em;
@@ -122,10 +119,8 @@
 	}
 
 	&__paragraph {
-		font-family:
-			League Spartan,
-			sans-serif;
-		font-size: 18px;
+		font-family: Spartan, sans-serif;
+		font-size: 15px;
 		font-weight: 300;
 		line-height: 32px;
 		text-align: center;
@@ -136,13 +131,12 @@
 		}
 
 		b {
-			font-family:
-				League Spartan,
-				sans-serif;
-			font-size: 18px;
+			font-family: Spartan, sans-serif;
+			font-size: 15px;
 			font-weight: 500;
 			line-height: 32px;
 			text-align: center;
+			color: #e7e0dc;
 		}
 	}
 }

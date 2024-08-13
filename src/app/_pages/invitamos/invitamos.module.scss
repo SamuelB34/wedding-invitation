@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Stoke:wght@300;400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
 @import "src/shared/scss/media-queries";
 @import "src/shared/scss/animations";
 
@@ -8,7 +7,7 @@
 		background-image: url("/invitamos/invitamos.png");
 		background-repeat: no-repeat;
 		background-size: cover;
-		background-position: top;
+		background-position: center;
 		overflow: hidden;
 		opacity: 0.8;
 		content: "";
@@ -93,6 +92,7 @@
 					line-height: 100px;
 					letter-spacing: -0.04em;
 					text-align: left;
+					color: #e7e0dc;
 
 					@include mobile {
 						font-family: Love, sans-serif;
@@ -105,16 +105,15 @@
 				}
 
 				p {
-					font-family:
-						League Spartan,
-						sans-serif;
+					font-family: Spartan, sans-serif;
 					font-size: 18px;
 					font-weight: 300;
 					line-height: 32px;
 					text-align: left;
+					color: #e7e0dc;
 
 					@include mobile {
-						font-size: 16px;
+						font-size: 14px;
 						line-height: 26px;
 					}
 				}
@@ -126,6 +125,7 @@
 					line-height: 24px;
 					letter-spacing: 1.06em;
 					text-align: left;
+					color: #e7e0dc;
 				}
 
 				&--animation {

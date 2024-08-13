@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Stoke:wght@300;400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
 @import "src/shared/scss/media-queries";
 @import "src/shared/scss/animations";
 
@@ -44,7 +43,7 @@
 		padding: 10px;
 
 		&__animation {
-			animation: slide-fade-in-bottom 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s
+			animation: slide-fade-in-bottom 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s
 				both;
 		}
 
@@ -141,10 +140,8 @@
 			}
 
 			.name {
-				font-family:
-					League Spartan,
-					sans-serif;
-				font-size: 18px;
+				font-family: Spartan, sans-serif;
+				font-size: 16px;
 				font-weight: 500;
 				line-height: 24px;
 				text-align: left;

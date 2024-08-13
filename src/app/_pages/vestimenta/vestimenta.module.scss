@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Stoke:wght@300;400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
 @import "src/shared/scss/media-queries";
 @import "src/shared/scss/animations";
 
@@ -63,6 +62,10 @@
 			width: 315px;
 			height: 315px;
 
+			&__animation {
+				animation: fade-in 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+			}
+
 			@include mobile {
 				width: 120px;
 				height: 120px;
@@ -98,6 +101,7 @@
 			line-height: 48px;
 			letter-spacing: 0.38em;
 			text-align: center;
+			color: #e7e0dc;
 
 			@include mobile {
 				font-size: 16px;
@@ -107,19 +111,20 @@
 	}
 
 	.paragraph {
-		font-family: "League Spartan", sans-serif;
+		font-family: Spartan, sans-serif;
 		font-size: 18px;
 		font-weight: 300;
 		line-height: 32px;
 		text-align: center;
 		letter-spacing: 2px;
+		color: #e7e0dc;
 
 		&__animation {
 			animation: slide-fade-in-bottom 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 		}
 
 		@include mobile {
-			font-size: 16px;
+			font-size: 14px;
 			line-height: 24px;
 		}
 
@@ -132,15 +137,14 @@
 		}
 
 		a {
-			font-family:
-				League Spartan,
-				sans-serif;
-			font-size: 18px;
+			font-family: Spartan, sans-serif;
+			font-size: 14px;
 			font-weight: 400;
 			line-height: 32px;
 			text-align: center;
 			text-decoration: underline;
 			text-underline: #e7e0dc;
+			color: #e7e0dc;
 		}
 	}
 }

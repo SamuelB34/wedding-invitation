@@ -5,6 +5,8 @@ import { useEffect, useRef } from "react"
 export const Vestimenta = ({ id }: { id: string }) => {
 	const paragraphRef = useRef<any>(null)
 	const inspirationRef = useRef<any>(null)
+	const img1Ref = useRef<any>(null)
+	const img2Ref = useRef<any>(null)
 
 	useEffect(() => {
 		const observer = new IntersectionObserver(
@@ -16,6 +18,12 @@ export const Vestimenta = ({ id }: { id: string }) => {
 					}
 					if (inspirationRef.current) {
 						inspirationRef.current.classList.add(styles["paragraph__animation"])
+					}
+					if (img1Ref.current) {
+						img1Ref.current.classList.add(styles["img__animation"])
+					}
+					if (img2Ref.current) {
+						img2Ref.current.classList.add(styles["img__animation"])
 					}
 				}
 			},
@@ -30,12 +38,26 @@ export const Vestimenta = ({ id }: { id: string }) => {
 			observer.observe(inspirationRef.current)
 		}
 
+		if (inspirationRef.current) {
+			observer.observe(img1Ref.current)
+		}
+
+		if (inspirationRef.current) {
+			observer.observe(img2Ref.current)
+		}
+
 		return () => {
 			if (paragraphRef.current) {
 				observer.unobserve(paragraphRef.current)
 			}
 			if (inspirationRef.current) {
 				observer.unobserve(inspirationRef.current)
+			}
+			if (img1Ref.current) {
+				observer.unobserve(img1Ref.current)
+			}
+			if (img2Ref.current) {
+				observer.unobserve(img2Ref.current)
 			}
 		}
 	})
@@ -49,6 +71,7 @@ export const Vestimenta = ({ id }: { id: string }) => {
 					width={315}
 					height={315}
 					className={styles.img}
+					ref={img1Ref}
 				/>
 				<Image
 					src={"/vestimenta/male-outfit.svg"}
@@ -56,6 +79,7 @@ export const Vestimenta = ({ id }: { id: string }) => {
 					width={315}
 					height={315}
 					className={styles.img}
+					ref={img2Ref}
 				/>
 			</div>
 			<span className={styles.title}>vESTIMEnTa</span>

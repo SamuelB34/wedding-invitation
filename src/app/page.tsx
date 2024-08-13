@@ -39,11 +39,12 @@ export default function Home() {
 	useEffect(() => {
 		const query = new URLSearchParams(window.location.search)
 		const search = query.get("guest_id")
+		console.log(search)
 		if (search) {
 			setGuestId(search)
 			getId(search)
 		} else {
-			setLoading(false)
+			// window.location.href = "https://www.google.com"
 		}
 	}, [router])
 
@@ -82,7 +83,7 @@ export default function Home() {
 			setGuestName(guestInfo.data.first_name)
 			setLoading(false)
 		} catch (e) {
-			window.location.href = "https://www.google.com"
+			// window.location.href = "https://www.google.com"
 			console.log(e)
 		}
 	}
