@@ -32,6 +32,14 @@ export const Cover = ({ openForm, id }: Props) => {
 					<span className={styles.days_text}>DAYS ‘TIL THE BIG DAY</span>
 				</div>
 
+				<Image
+					src={"/cover/arrow-down.svg"}
+					alt={"arrow"}
+					width={24}
+					height={24}
+					className={styles.icon}
+				/>
+
 				{/*<div className={styles.btn}>*/}
 				{/*	<WedButton onClick={openForm}>*/}
 				{/*		<>CONFIRMA TU ASISTENCIA</>*/}

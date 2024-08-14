@@ -59,7 +59,7 @@
 		}
 
 		&--animation {
-			animation: fade-in 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+			animation: fade-in 3.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 		}
 	}
 
@@ -90,6 +90,9 @@
 			}
 		}
 
+		&__bottom {
+		}
+
 		&__paragraph {
 			font-family: Spartan, sans-serif;
 			font-size: 18px;
@@ -112,6 +115,17 @@
 				font-weight: 500;
 				text-decoration: underline;
 			}
+		}
+
+		.rsvp {
+			cursor: pointer;
+			line-height: 40px;
+			border: 1px solid #e7e0dc;
+			color: #e7e0dc;
+			border-radius: 20px;
+			text-align: center;
+			font-family: Stoke, sans-serif;
+			font-weight: 600;
 		}
 	}
 

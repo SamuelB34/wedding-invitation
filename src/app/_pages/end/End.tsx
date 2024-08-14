@@ -3,7 +3,7 @@ import { Counter } from "../../_components/counter/Counter"
 import Image from "next/image"
 import { useEffect, useRef } from "react"
 
-export const End = ({ id }: { id: string }) => {
+export const End = ({ id, rsvp }: { id: string; rsvp: () => void }) => {
 	const textRef = useRef<any>(null)
 	const imgRef = useRef<any>(null)
 
@@ -58,8 +58,7 @@ export const End = ({ id }: { id: string }) => {
 			<div className={styles.text}>
 				<p className={styles.text__title}>¡NOS VEMOS PRONTO!</p>
 				<p className={styles.text__paragraph} ref={textRef}>
-					Si aún no confirmas tu asistencia, <br />{" "}
-					<a href="#">¡haz click aquí!</a>
+					<a onClick={rsvp}>¡haz click para ver la recepción!</a>
 				</p>
 			</div>
 			<div className={styles.line}></div>

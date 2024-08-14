@@ -59,15 +59,14 @@ export const NoNinos = ({ id }: { id: string }) => {
 			</div>
 			<div className={styles.text}>
 				<p className={styles.text__title} ref={titleRef}>
-					ADULTOS SOLAMENTE SIN EXCEPCIÓN
+					SIN EXCEPCIÓN
 				</p>
 				<div className={styles.line}>
 					<div className={styles.line__content} ref={lineRef}></div>
 				</div>
 				<p className={styles.text__paragraph} ref={paragraphRef}>
-					Esperamos puedan encontrar un lugar seguro para dejar a sus hijos al
-					cuidado <br /> de otros y comprender nuestra decisión de hacer de este
-					evento uno <b>SIN NIÑOS</b>.
+					Esperamos que respetando nuestra decision, nos ayuden a hacer de esta
+					la boda de nuestros sueños. Un evento <b>SIN NIÑOS</b>.
 				</p>
 			</div>
 		</section>

@@ -129,7 +129,12 @@ export default function Home() {
 					<NoNinos id={"no-ninos"} />
 					<Itinerario id={"itinerario"} />
 					<Regalos id={"regalos"} />
-					<End id={"end"} />
+					<End
+						id={"end"}
+						rsvp={() => {
+							setShowRsvp(true)
+						}}
+					/>
 					<Rsvp guestId={guestId} guestName={guestName} show={showRsvp} />
 					{section !== "cover" && (
 						<Dots
