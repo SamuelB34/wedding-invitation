@@ -10,15 +10,19 @@ export const Itinerario = ({ id }: { id: string }) => {
 		},
 		{
 			name: "Recepción",
-			hour: "5:00 P.M.",
+			hour: "8:00 P.M.",
 		},
 		{
-			name: "Baile",
-			hour: "5:00 P.M.",
+			name: "Entrada novios",
+			hour: "8:20 P.M.",
+		},
+		{
+			name: "Brindis",
+			hour: "8:50 P.M.",
 		},
 		{
 			name: "Cena",
-			hour: "5:00 P.M.",
+			hour: "9:00 P.M.",
 		},
 	]
 

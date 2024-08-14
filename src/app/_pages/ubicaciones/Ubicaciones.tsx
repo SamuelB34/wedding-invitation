@@ -113,7 +113,7 @@ export const Ubicaciones = ({ id }: Props) => {
 
 				<div className={styles.card} ref={card2}>
 					<Image
-						src={"/ubicaciones/recepcion.svg"}
+						src={"/ubicaciones/recepcion.png"}
 						alt={"recepcion"}
 						className={styles.mobile__ceremonias}
 						width={350}

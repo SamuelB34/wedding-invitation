@@ -40,8 +40,9 @@ export const Regalos = ({ id }: { id: string }) => {
 
 						<div className={styles.right}>
 							<span className={styles.right__text}>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu
-								aliquam ante, sed maximus.
+								Abajo pueden encontrar algunas opciones que hemos seleccionado
+								previamente.
+								<b> ¡Regalos en efectivo también son bienvenidos!</b>
 							</span>
 							<div className={styles.right__btns} ref={btnsRef}>
 								<div className={styles.btn}>

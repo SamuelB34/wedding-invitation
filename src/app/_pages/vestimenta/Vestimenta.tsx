@@ -66,7 +66,7 @@ export const Vestimenta = ({ id }: { id: string }) => {
 		<section className={styles.container} id={id}>
 			<div className={styles.outfits_container}>
 				<Image
-					src={"/vestimenta/female-outfit.svg"}
+					src={"/vestimenta/female-outfit2.svg"}
 					alt={"fem"}
 					width={315}
 					height={315}
@@ -91,8 +91,8 @@ export const Vestimenta = ({ id }: { id: string }) => {
 			</div>
 
 			<span className={styles.paragraph} ref={paragraphRef}>
-				¡Queremos lograr fotos cohesivas ese dia! Les pedimos por favor respeten
-				nuestra elección.
+				¡Queremos lograr fotos cohesivas ese dia! Amablemente les pedimos ir de
+				color negro
 			</span>
 			<span className={styles.paragraph} ref={inspirationRef}>
 				¿Búscas inspiración? <br />
