@@ -7,6 +7,7 @@ interface Props {
 }
 export const Nosotros = ({ id }: Props) => {
 	const bodyRef = useRef<any>(null)
+	const imageRef = useRef<any>(null)
 
 	useEffect(() => {
 		const observer = new IntersectionObserver(
@@ -15,6 +16,9 @@ export const Nosotros = ({ id }: Props) => {
 				if (firstEntry && firstEntry.isIntersecting) {
 					if (bodyRef.current) {
 						bodyRef.current.classList.add(styles["text__container--animation"])
+					}
+					if (imageRef.current) {
+						imageRef.current.classList.add(styles["mobile__animation"])
 					}
 				}
 			},
@@ -25,9 +29,16 @@ export const Nosotros = ({ id }: Props) => {
 			observer.observe(bodyRef.current)
 		}
 
+		if (imageRef.current) {
+			observer.observe(imageRef.current)
+		}
+
 		return () => {
 			if (bodyRef.current) {
 				observer.unobserve(bodyRef.current)
+			}
+			if (imageRef.current) {
+				observer.unobserve(imageRef.current)
 			}
 		}
 	}, [])
@@ -60,7 +71,7 @@ export const Nosotros = ({ id }: Props) => {
 					height={3200}
 					className={styles.image}
 				/>
-				<div className={styles.mobile}>
+				<div className={styles.mobile} ref={imageRef}>
 					<Image
 						src={"/nosotros/us-mobile.png"}
 						alt={"nosotros"}

@@ -117,8 +117,8 @@ export default function Home() {
 						}}
 					/>
 					<Cover
-						openForm={() => {
-							console.log("Hola mundo")
+						scrollToView={() => {
+							scrollToElement("nosotros")
 						}}
 						id={"cover"}
 					/>

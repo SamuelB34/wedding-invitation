@@ -1,6 +1,7 @@
 import styles from "./ubicaciones.module.scss"
 import Image from "next/image"
 import { useEffect, useRef } from "react"
+import { marah_eventos, perpetuo_socorro } from "@/app/_pages/ubicaciones/urls"
 
 interface Props {
 	id: string
@@ -75,7 +76,7 @@ export const Ubicaciones = ({ id }: Props) => {
 					/>
 					<div className={styles.content__line}></div>
 					<div className={styles["content__base--text"]}>
-						<span className={styles.hour}>4:50 PM</span>
+						<span className={styles.hour}>8:00 PM</span>
 						<span className={styles.spot}>RECEPCIÓN</span>
 					</div>
 					<span className={styles["content__base--place"]}>
@@ -87,7 +88,12 @@ export const Ubicaciones = ({ id }: Props) => {
 			</div>
 
 			<div className={styles.mobile}>
-				<div className={styles.card} ref={card1}>
+				<a
+					className={styles.card}
+					ref={card1}
+					href={perpetuo_socorro}
+					target={"_blank"}
+				>
 					<Image
 						src={"/ubicaciones/ceremonia.svg"}
 						alt={"ceremonia"}
@@ -109,9 +115,14 @@ export const Ubicaciones = ({ id }: Props) => {
 							</b>
 						</span>
 					</div>
-				</div>
+				</a>
 
-				<div className={styles.card} ref={card2}>
+				<a
+					className={styles.card}
+					ref={card2}
+					href={marah_eventos}
+					target={"_blank"}
+				>
 					<Image
 						src={"/ubicaciones/recepcion.png"}
 						alt={"recepcion"}
@@ -120,7 +131,7 @@ export const Ubicaciones = ({ id }: Props) => {
 						height={256}
 					/>
 					<div className={styles.hour}>
-						<span>4:50 PM</span>
+						<span>8:00 PM</span>
 					</div>
 
 					<div className={styles.data}>
@@ -129,7 +140,7 @@ export const Ubicaciones = ({ id }: Props) => {
 							<b>Marah</b> Jardín de Eventos
 						</span>
 					</div>
-				</div>
+				</a>
 			</div>
 		</section>
 	)

@@ -96,7 +96,7 @@ export const Vestimenta = ({ id }: { id: string }) => {
 			</span>
 			<span className={styles.paragraph} ref={inspirationRef}>
 				¿Búscas inspiración? <br />
-				<a href="https://www.google.com" target={"_blank"}>
+				<a href="https://pin.it/2axv3qwrN" target={"_blank"}>
 					¡Haz click aquí para ideas!
 				</a>
 			</span>

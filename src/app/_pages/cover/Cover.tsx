@@ -4,11 +4,11 @@ import Image from "next/image"
 import { Counter } from "@/app/_components/counter/Counter"
 
 interface Props {
-	openForm: () => void
+	scrollToView: () => void
 	id: string
 }
 
-export const Cover = ({ openForm, id }: Props) => {
+export const Cover = ({ id, scrollToView }: Props) => {
 	return (
 		<section className={styles.cover} id={id}>
 			<div className={styles.cover__content}>
@@ -38,6 +38,7 @@ export const Cover = ({ openForm, id }: Props) => {
 					width={24}
 					height={24}
 					className={styles.icon}
+					onClick={scrollToView}
 				/>
 
 				{/*<div className={styles.btn}>*/}

@@ -45,15 +45,33 @@ export const Regalos = ({ id }: { id: string }) => {
 								<b> ¡Regalos en efectivo también son bienvenidos!</b>
 							</span>
 							<div className={styles.right__btns} ref={btnsRef}>
-								<div className={styles.btn}>
-									<span>Bed, Bath & Beyond</span>
-								</div>
-								<div className={styles.btn}>
+								<a
+									href={
+										"https://www.amazon.com.mx/wedding/registry/2CBUWSH5FQP49"
+									}
+									target={"_blank"}
+									className={styles.btn}
+								>
+									<span>Amazon</span>
+								</a>
+								<a
+									href={
+										"https://mesaderegalos.liverpool.com.mx/milistaderegalos/51467654"
+									}
+									target={"_blank"}
+									className={styles.btn}
+								>
 									<span>Liverpool</span>
-								</div>
-								<div className={styles.btn}>
+								</a>
+								<a
+									href={
+										"https://www.target.com/gift-registry/gift-giver?registryId=5b8855a0-23bc-11ef-8824-619fd27fd0d8&type=WEDDING"
+									}
+									target={"_blank"}
+									className={styles.btn}
+								>
 									<span>Target</span>
-								</div>
+								</a>
 							</div>
 						</div>
 					</div>
