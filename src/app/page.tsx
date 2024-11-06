@@ -14,7 +14,10 @@ import { Header } from "@/app/_components/header/Header"
 import { Dots } from "./_components/dots/Dots"
 import { pages } from "../../shared/variables"
 import { SideMenu } from "@/app/_components/side-menu/SideMenu"
-import { getGuestById } from "@/shared/services/guestsService"
+import {
+	getGuestById,
+	updateSawInvitation,
+} from "@/shared/services/guestsService"
 import { useRouter } from "next/navigation"
 import { Rsvp } from "@/app/_pages/rsvp/Rsvp"
 import { useEffect, useState } from "react"
@@ -82,6 +85,7 @@ export default function Home() {
 			const guestInfo = await getGuestById(guest)
 			setGuestName(guestInfo.data.first_name)
 			setLoading(false)
+			await updateSawInvitation(guest)
 		} catch (e) {
 			// window.location.href = "https://www.google.com"
 			console.log(e)
