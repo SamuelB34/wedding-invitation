@@ -11,19 +11,15 @@ import { Itinerario } from "@/app/_pages/itinerario/Itinerario"
 import { Ubicaciones } from "@/app/_pages/ubicaciones/Ubicaciones"
 import { Regalos } from "@/app/_pages/regalos/Regalos"
 import { Header } from "@/app/_components/header/Header"
-import { Dots } from "./_components/dots/Dots"
+import { Dots } from "@/app/_components/dots/Dots"
 import { pages } from "../../shared/variables"
 import { SideMenu } from "@/app/_components/side-menu/SideMenu"
-import {
-	getGuestById,
-	updateSawInvitation,
-} from "@/shared/services/guestsService"
 import { useRouter } from "next/navigation"
 import { Rsvp } from "@/app/_pages/rsvp/Rsvp"
 import { useEffect, useState } from "react"
 
 export default function Home() {
-	const [loading, setLoading] = useState(true)
+	const [loading, setLoading] = useState(false)
 	const [showSideMenu, setShowSideMenu] = useState(false)
 	const [showRsvp, setShowRsvp] = useState(false)
 	const [section, setSection] = useState("")
@@ -44,8 +40,8 @@ export default function Home() {
 		const search = query.get("guest_id")
 		console.log(search)
 		if (search) {
-			setGuestId(search)
-			getId(search)
+			// setGuestId(search)
+			// getId(search)
 		} else {
 			// window.location.href = "https://www.google.com"
 		}
@@ -79,18 +75,6 @@ export default function Home() {
 			}
 		}
 	}, [loading])
-
-	const getId = async (guest: string) => {
-		try {
-			const guestInfo = await getGuestById(guest)
-			setGuestName(guestInfo.data.first_name)
-			setLoading(false)
-			await updateSawInvitation(guest)
-		} catch (e) {
-			// window.location.href = "https://www.google.com"
-			console.log(e)
-		}
-	}
 
 	const dark_pages = ["nosotros", "ubicaciones", "itinerario", "regalos"]
 

@@ -9,7 +9,7 @@ import timezone from "dayjs/plugin/timezone"
 dayjs.extend(utc)
 dayjs.extend(timezone)
 
-const targetDate = dayjs.tz("2024-11-23T17:00:00", "America/Los_Angeles")
+const targetDate = dayjs.tz("2025-11-23T17:00:00", "America/Los_Angeles")
 
 export const Counter = () => {
 	const [timeLeft, setTimeLeft] = useState({

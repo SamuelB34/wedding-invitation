@@ -71,10 +71,6 @@ export const End = ({ id, rsvp }: { id: string; rsvp: () => void }) => {
 				<a href="#">Registro de regalos</a>
 			</div>
 			<div></div>
-
-			<span className={styles.legend}>
-				Made by Samuel Barragan <br /> & Marlene Araiza
-			</span>
 		</section>
 	)
 }

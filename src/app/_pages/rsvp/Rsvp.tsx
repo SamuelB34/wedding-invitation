@@ -1,8 +1,6 @@
 import styles from "./rsvp.module.scss"
 import { useQRCode } from "next-qrcode"
 import Image from "next/image"
-import { useEffect } from "react"
-import { updateAssist } from "../../../shared/services/guestsService"
 
 interface Props {
 	guestId: string
@@ -13,17 +11,6 @@ interface Props {
 export const Rsvp = ({ guestId, guestName, show }: Props) => {
 	const { SVG } = useQRCode()
 
-	useEffect(() => {
-		updateGuestAssist()
-	}, [])
-
-	const updateGuestAssist = async () => {
-		try {
-			await updateAssist(guestId, { assist: true })
-		} catch (e) {
-			console.log(e)
-		}
-	}
 	return (
 		<div
 			className={

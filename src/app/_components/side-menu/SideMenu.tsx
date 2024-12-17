@@ -63,10 +63,6 @@ export const SideMenu = ({ onClick, show }: Props) => {
 						</span>
 					)
 				})}
-
-				<span className={styles.legend}>
-					Made by Samuel Barragan <br /> + Marlene Araiza
-				</span>
 			</div>
 		</div>
 	)
