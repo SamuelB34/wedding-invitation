@@ -20,7 +20,8 @@ export const Rsvp = ({ guestId, guestName, show }: Props) => {
 			}
 		>
 			<div className={styles.rsvp__content}>
-				<span className={styles.hello}>¡Hola {guestName}!</span>
+				<span className={styles.hello}>¡Hola Melissa!</span>
+				{/*<span className={styles.hello}>¡Hola {guestName}!</span>*/}
 
 				<SVG
 					text={guestId || "Example"}
